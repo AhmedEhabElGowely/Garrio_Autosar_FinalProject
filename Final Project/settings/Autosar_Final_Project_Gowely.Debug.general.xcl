@@ -1,0 +1,15 @@
+"D:\Engineering\Apps\IAR Systems\Embedded Workbench 9.1\arm\bin\armPROC.dll" 
+
+"D:\Engineering\Apps\IAR Systems\Embedded Workbench 9.1\arm\bin\armLMIFTDI.dll" 
+
+"D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Exe\Autosar_Final_Project_Gowely.out" 
+
+--plugin="D:\Engineering\Apps\IAR Systems\Embedded Workbench 9.1\arm\bin\armbat.dll" 
+
+--device_macro="D:\Engineering\Apps\IAR Systems\Embedded Workbench 9.1\arm/config/debugger/TexasInstruments/TM4C123.dmac" 
+
+--flash_loader="D:\Engineering\Apps\IAR Systems\Embedded Workbench 9.1\arm/config/flashloader/TexasInstruments/FlashTC4_H6_o.board" 
+
+
+
+
