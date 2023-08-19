@@ -1,0 +1,322 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  19/Aug/2023  21:21:12
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final
+#        Project\Debug\Exe\Autosar_Final_Project_Gowely.out
+#    Map file     =
+#        D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final
+#        Project\Debug\List\Autosar_Final_Project_Gowely.map
+#    Command line =
+#        -f "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio
+#        Autosar Training Final Project\Final
+#        Project\Debug\Exe\Autosar_Final_Project_Gowely.out.rsp"
+#        ("D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\ButtonManager_SWC_1.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\CDD_SWC_1.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\Det_Module\Det.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\Dio_Module\Dio.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\Dio_Module\Dio_LCfg.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\LedControl_SWC_2.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\main.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final Project\Debug\Obj\Port_Module\Port.o"
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final
+#        Project\Debug\Obj\Port_Module\Port_LCfg.o" "D:\Engineering\Senior I
+#        22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final
+#        Project\Final Project\Debug\Obj\Rte.o" "D:\Engineering\Senior I
+#        22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final
+#        Project\Final Project\Debug\Obj\Systick_Module\Systick.o"
+#        --no_out_extension -o "D:\Engineering\Senior I 22-23\Garrio AUTOSAR
+#        Training\Garrio Autosar Training Final Project\Final
+#        Project\Debug\Exe\Autosar_Final_Project_Gowely.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar
+#        Training Final Project\Final
+#        Project\Debug\List\Autosar_Final_Project_Gowely.map" --config
+#        "D:\Engineering\Apps\IAR Systems\Embedded Workbench
+#        9.1\arm/config/linker/TexasInstruments/TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=VFPv4_sp)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code          0x0    0x40  vector_table_M.o [8]
+                                   - 0x40    0x40
+
+"P1":                                       0x7d7
+  .text              ro code         0x40   0x1e0  Port.o [4]
+  .text              ro code        0x220   0x13c  Dio.o [3]
+  .text              ro code        0x35c    0xfc  ButtonManager_SWC_1.o [1]
+  .text              ro code        0x458    0x6c  CDD_SWC_1.o [1]
+  .text              ro code        0x4c4    0x24  Rte.o [1]
+  .text              ro code        0x4e8    0x8c  LedControl_SWC_2.o [1]
+  .text              ro code        0x574    0x7e  lz77_init_single.o [8]
+  .text              ro code        0x5f2     0x2  vectortrap_M.o [8]
+  .text              ro code        0x5f4    0x5c  main.o [1]
+  .text              ro code        0x650    0x4c  Systick.o [5]
+  .text              ro code        0x69c    0x28  data_init.o [8]
+  .text              ro code        0x6c4    0x22  fpinit_M.o [7]
+  .iar.init_table    const          0x6e8    0x10  - Linker created -
+  .text              ro code        0x6f8    0x1e  cmain.o [8]
+  .text              ro code        0x716     0x4  low_level_init.o [6]
+  .text              ro code        0x71a     0x4  exit.o [6]
+  .text              ro code        0x720     0xa  cexit.o [8]
+  .text              ro code        0x72c    0x14  exit.o [9]
+  .text              ro code        0x740    0x1c  cstartup_M.o [8]
+  .rodata            const          0x75c     0x0  lz77_init_single.o [8]
+  Initializer bytes  const          0x75c    0xbb  <for P2-1>
+                                  - 0x817   0x7d7
+
+"P2", part 1 of 2:                          0x180
+  P2-1                        0x2000'0000   0x180  <Init block>
+    .data            inited   0x2000'0000     0x4  Dio.o [3]
+    .data            inited   0x2000'0004     0x4  Dio.o [3]
+    .data            inited   0x2000'0008     0x4  Dio.o [3]
+    .data            inited   0x2000'000c     0x8  Dio_LCfg.o [3]
+    .data            inited   0x2000'0014     0x8  Dio_LCfg.o [3]
+    .data            inited   0x2000'001c   0x158  Port_LCfg.o [4]
+    .bss             inited   0x2000'0174     0x4  ButtonManager_SWC_1.o [1]
+    .data            inited   0x2000'0178     0x1  ButtonManager_SWC_1.o [1]
+    .data            inited   0x2000'0179     0x1  ButtonManager_SWC_1.o [1]
+    .bss             inited   0x2000'017a     0x1  LedControl_SWC_2.o [1]
+    .bss             inited   0x2000'017b     0x1  LedControl_SWC_2.o [1]
+    .bss             inited   0x2000'017c     0x1  LedControl_SWC_2.o [1]
+    .bss             inited   0x2000'017d     0x1  main.o [1]
+    .bss             inited   0x2000'017e     0x1  Rte.o [1]
+    .bss             inited   0x2000'017f     0x1  Systick.o [5]
+                            - 0x2000'0180   0x180
+
+"P2", part 2 of 2:                         0x1000
+  CSTACK                      0x2000'0180  0x1000  <Block>
+    CSTACK           uninit   0x2000'0180  0x1000  <Block tail>
+                            - 0x2000'1180  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x817     0x3'ffff  0x3'f7e9
+  0x2000'1180  0x2000'7fff    0x6e80
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0xbb (48% of destination):
+                0x75c   0xbb
+    1 destination range, total size 0x180:
+          0x2000'0000  0x180
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj: [1]
+    ButtonManager_SWC_1.o      252        3        6
+    CDD_SWC_1.o                108
+    LedControl_SWC_2.o         140        1        3
+    Rte.o                       36                 1
+    main.o                      92        1        1
+    ------------------------------------------------
+    Total:                     628        5       11
+
+D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Det_Module: [2]
+    ------------------------------------------------
+    Total:
+
+D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Dio_Module: [3]
+    Dio.o                      316        5       12
+    Dio_LCfg.o                            8       16
+    ------------------------------------------------
+    Total:                     316       13       28
+
+D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Port_Module: [4]
+    Port.o                     480
+    Port_LCfg.o                         168      344
+    ------------------------------------------------
+    Total:                     480      168      344
+
+D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Systick_Module: [5]
+    Systick.o                   76        1        1
+    ------------------------------------------------
+    Total:                      76        1        1
+
+dl7M_tln.a: [6]
+    exit.o                       4
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                       8
+
+m7M_tls.a: [7]
+    fpinit_M.o                  34
+    ------------------------------------------------
+    Total:                      34
+
+rt7M_tl.a: [8]
+    cexit.o                     10
+    cmain.o                     30
+    cstartup_M.o                28
+    data_init.o                 40
+    lz77_init_single.o         126
+    vector_table_M.o            64
+    vectortrap_M.o               2
+    ------------------------------------------------
+    Total:                     300
+
+shb_l.a: [9]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                         4        2
+    Linker created                       16    4'096
+----------------------------------------------------
+    Grand Total:             1'866      205    4'480
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x6e8          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x6f8          --   Gb  - Linker created -
+?main                         0x6f9         Code  Gb  cmain.o [8]
+BusFault_Handler              0x5f3         Code  Wk  vectortrap_M.o [8]
+ButtonManager_Composition_Prototype_pp_Button_LedCommand_SR_Led_Command_Element_1
+                        0x2000'017e    0x1  Data  Gb  Rte.o [1]
+ButtonManager_SWC_1_Runnable_1
+                              0x35d   0xfc  Code  Gb  ButtonManager_SWC_1.o [1]
+CCW_Button              0x2000'0179    0x1  Data  Gb  ButtonManager_SWC_1.o [1]
+CDD_SWC_1_ControlLed          0x47f   0x3c  Code  Gb  CDD_SWC_1.o [1]
+CDD_SWC_1_Get_Reading_1
+                              0x463    0xe  Code  Gb  CDD_SWC_1.o [1]
+CDD_SWC_1_Get_Reading_2
+                              0x471    0xe  Code  Gb  CDD_SWC_1.o [1]
+CDD_SWC_1_Init_Runnable
+                              0x459    0xa  Code  Gb  CDD_SWC_1.o [1]
+CSTACK$$Base            0x2000'0180          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1180          --   Gb  - Linker created -
+CW_Button               0x2000'0178    0x1  Data  Gb  ButtonManager_SWC_1.o [1]
+Channel_struct_ptr      0x2000'0008    0x4  Data  Lc  Dio.o [3]
+Command                 0x2000'017a    0x1  Data  Gb  LedControl_SWC_2.o [1]
+Debounce_flag           0x2000'0174    0x4  Data  Gb  ButtonManager_SWC_1.o [1]
+DebugMon_Handler              0x5f3         Code  Wk  vectortrap_M.o [8]
+DioChannel              0x2000'0014    0x8  Data  Gb  Dio_LCfg.o [3]
+DioPort                 0x2000'000c    0x8  Data  Gb  Dio_LCfg.o [3]
+Dio_ReadChannel               0x221   0xc4  Code  Gb  Dio.o [3]
+Dio_WriteChannelGroup         0x2e5   0x56  Code  Gb  Dio.o [3]
+HardFault_Handler             0x5f3         Code  Wk  vectortrap_M.o [8]
+LED_Group               0x2000'0000    0x4  Data  Gb  Dio.o [3]
+LedControl_SWC_2_Runnable_1
+                              0x4e9   0x8c  Code  Gb  LedControl_SWC_2.o [1]
+MemManage_Handler             0x5f3         Code  Wk  vectortrap_M.o [8]
+NMI_Handler                   0x5f3         Code  Wk  vectortrap_M.o [8]
+PendSV_Handler                0x5f3         Code  Wk  vectortrap_M.o [8]
+PortPin                 0x2000'001c  0x158  Data  Gb  Port_LCfg.o [4]
+Port_Init                      0x41  0x1d2  Code  Gb  Port.o [4]
+Port_struct_ptr         0x2000'0004    0x4  Data  Lc  Dio.o [3]
+Prev_Command            0x2000'017b    0x1  Data  Gb  LedControl_SWC_2.o [1]
+Region$$Table$$Base           0x6e8          --   Gb  - Linker created -
+Region$$Table$$Limit          0x6f8          --   Gb  - Linker created -
+Rte_IRead_SR_Led_Command_Element_1_LedControl_Composition_Prototype_rp_Button_LedCommand_LedControl_SWC_2_Runnable_1
+                              0x4cd   0x16  Code  Gb  Rte.o [1]
+Rte_Write_ButtonManager_Composition_Prototype_pp_Button_LedCommand_SR_Led_Command_Element_1
+                              0x4c5    0x8  Code  Gb  Rte.o [1]
+SVC_Handler                   0x5f3         Code  Wk  vectortrap_M.o [8]
+State                   0x2000'017c    0x1  Data  Gb  LedControl_SWC_2.o [1]
+SysTick_Handler               0x651    0xa  Code  Gb  Systick.o [5]
+SysTick_Start                 0x65b   0x2e  Code  Gb  Systick.o [5]
+UsageFault_Handler            0x5f3         Code  Wk  vectortrap_M.o [8]
+__cmain                       0x6f9         Code  Gb  cmain.o [8]
+__exit                        0x72d   0x14  Code  Gb  exit.o [9]
+__iar_data_init3              0x69d   0x28  Code  Gb  data_init.o [8]
+__iar_init_vfp                0x6c5         Code  Gb  fpinit_M.o [7]
+__iar_lz77_init_single3
+                              0x575   0x7e  Code  Gb  lz77_init_single.o [8]
+__iar_program_start           0x741         Code  Gb  cstartup_M.o [8]
+__low_level_init              0x717    0x4  Code  Gb  low_level_init.o [6]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [8]
+_call_main                    0x705         Code  Gb  cmain.o [8]
+_exit                         0x721         Code  Gb  cexit.o [8]
+exit                          0x71b    0x4  Code  Gb  exit.o [6]
+g_run_flag              0x2000'017d    0x1  Data  Gb  main.o [1]
+g_ticks                 0x2000'017f    0x1  Data  Gb  Systick.o [5]
+main                          0x5f5   0x5c  Code  Gb  main.o [1]
+
+
+[1] = D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj
+[2] = D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Det_Module
+[3] = D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Dio_Module
+[4] = D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Port_Module
+[5] = D:\Engineering\Senior I 22-23\Garrio AUTOSAR Training\Garrio Autosar Training Final Project\Final Project\Debug\Obj\Systick_Module
+[6] = dl7M_tln.a
+[7] = m7M_tls.a
+[8] = rt7M_tl.a
+[9] = shb_l.a
+
+  1'866 bytes of readonly  code memory
+    205 bytes of readonly  data memory
+  4'480 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
